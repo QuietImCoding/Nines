@@ -12,8 +12,8 @@ function setNativeValue(element, value) {
     element.dispatchEvent(event);
 }
 
-var infile=document.querySelector('#media').value;
-var fname = infile.substring(infile.lastIndexOf("\\")+1, infile.length);
+var infile=document.querySelector('#media').files[0].name;
+var fname = infile;
 [id, shape, fg, bg] = fname.split('.');
 
 setNativeValue(document.querySelector('#name'),
@@ -38,3 +38,4 @@ setNativeValue(document.querySelector('tr.AssetPropertiesFormreact__TrContainer-
 
 document.querySelector('footer.Blockreact__Block-sc-1xf18x6-0 > button:nth-child(1)').click();
 document.querySelector('.gMiESj').click();
+`Minted Piece ${id}`
